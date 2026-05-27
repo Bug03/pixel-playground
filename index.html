@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Playground — Owlet Channel</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #2c3e50;
+            font-family: 'Courier New', monospace;
+        }
+        canvas { display: block; }
+        #hint {
+            position: fixed;
+            left: 50%;
+            bottom: 16px;
+            transform: translateX(-50%);
+            color: #cfe3f2;
+            background: rgba(0,0,0,0.35);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            user-select: none;
+        }
+        #chat-input {
+            position: fixed;
+            left: 50%;
+            bottom: 56px;
+            transform: translateX(-50%);
+            width: min(520px, 80vw);
+            display: none;
+            padding: 10px 14px;
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            background: rgba(20, 30, 40, 0.92);
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="hint">Move: WASD &nbsp;|&nbsp; Run: Shift &nbsp;|&nbsp; Jump (x2): Space &nbsp;|&nbsp; Attack: J / Click &nbsp;|&nbsp; Chat: Enter</div>
+    <input id="chat-input" type="text" maxlength="120" placeholder="Type a message and press Enter…" autocomplete="off" />
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.x/dist/pixi.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
